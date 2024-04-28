@@ -10,3 +10,40 @@
 ## Добавляем диаграмму решения задачи.
 
 ![Диаграмма решения задачи](diagram.png)
+
+## Написали программу для решения задачи
+```
+string[] stringArray = new string[3];
+
+for (int i = 0; i < stringArray.Length; i++)
+{
+    Console.WriteLine("Введите строку");
+    stringArray[i] = Console.ReadLine();
+}
+
+int count = 0;
+foreach (string str in stringArray)
+{
+    if (str.Length <= 3)
+    {
+        count++;
+    }
+}
+
+string[] newArray = new string[count];
+int a = 0;
+foreach (string str in stringArray)
+{
+    if (str.Length <= 3)
+    {
+        newArray[a] = str;
+        a++;
+    }
+}
+
+Console.WriteLine("Строки длиной меньше или равной 3 символам:");
+foreach (string str in newArray)
+{
+    Console.WriteLine(str);
+}
+```
